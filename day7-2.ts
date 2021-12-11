@@ -10,7 +10,10 @@ console.log(crabs, max);
 const fuelUsage: number[] = Array(max).fill(0);
 for (let i = 0; i < max; i++) {
   for (let crab of crabs) {
-    fuelUsage[i] += Math.abs(crab - i);
+    const foo = Math.abs(crab - i);
+    for (let n = 1; n <= foo; n++) {
+      fuelUsage[i] += n;
+    }
   }
 }
 
